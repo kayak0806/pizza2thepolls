@@ -13,22 +13,23 @@ tinyGET(url, null, function(data) {
   document.getElementById('stat-info').innerHTML = 'As of ' + now.toLocaleString();
 });
 
-// var handler = StripeCheckout.configure({
-//   key: 'pk_live_P8CQD0jjeNY83ykHy75Bfxig',
-//   image: 'https://polls.pizza/images/logo.png',
-//   locale: 'auto',
-//   token: function(token) {
-//     tinyPOST(
-//       'https://docs.google.com/forms/d/e/1FAIpQLSf5RPXqXaVk8KwKC7kzthukydvA9vL7_bP9V9O9PIAiXl14cQ/formResponse',
-//       {
-//         'entry.1599572815': token.email,
-//         'entry.690252188': token.card.address_zip,
-//         'entry.1474063298': token.id,
-//         'entry.1036377864': (window.amount).toString()
-//       }
-//     )
-//   }
-// });
+var handler = StripeCheckout.configure({
+  key: 'pk_test_sADB2cqphkgwJNsAPuzt1FG6',
+  image: 'https://polls.pizza/images/logo.png',
+  locale: 'auto',
+  token: function(token) {
+    var thing;
+    // tinyPOST(
+    //   // 'https://docs.google.com/forms/d/e/1FAIpQLSf5RPXqXaVk8KwKC7kzthukydvA9vL7_bP9V9O9PIAiXl14cQ/formResponse',
+    //   {
+    //     'entry.1599572815': token.email,
+    //     'entry.690252188': token.card.address_zip,
+    //     'entry.1474063298': token.id,
+    //     'entry.1036377864': (window.amount).toString()
+    //   }
+    // )
+  }
+});
 
 var getAmount = function() {
   var radios = document.getElementsByName('amount');
@@ -64,7 +65,7 @@ document.getElementById('checkout').addEventListener('click', function(e) {
   if (amount) {
     // Open Checkout with further options:
     handler.open({
-      name: 'Pizza to the Polls',
+      name: 'Pizza for Protesters',
       description: 'About '+pizzas+' Pizza' + (pizzas > 1 ? 's' : ''),
       zipCode: true,
       amount: amount,
