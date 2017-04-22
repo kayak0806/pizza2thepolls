@@ -4,9 +4,9 @@ var now = new Date;
 
 tinyGET(url, null, function(data) {
   var now = new Date()
-  var raised = '$' + data.feed.entry[0].content['$t'].split(": ")[1];
-  var pizzas = data.feed.entry[1].content['$t'].split(': ')[1];
-  var remaining = '$' + data.feed.entry[2].content['$t'].split(': ')[1];
+  var raised = '$' + data.feed.entry[1].content['$t'].split(": ")[1].split(",")[0];
+  var pizzas = data.feed.entry[1].content['$t'].split(': ')[2].split(",")[0];
+  var remaining = '$' + data.feed.entry[1].content['$t'].split(': ')[3].split(",")[0];
   document.getElementById('stat-raised').innerHTML = raised;
   document.getElementById('stat-pizzas').innerHTML = pizzas;
   document.getElementById('stat-remaining').innerHTML = remaining;
@@ -18,16 +18,17 @@ var handler = StripeCheckout.configure({
   image: 'https://polls.pizza/images/logo.png',
   locale: 'auto',
   token: function(token) {
-    var thing;
-    // tinyPOST(
-    //   // 'https://docs.google.com/forms/d/e/1FAIpQLSf5RPXqXaVk8KwKC7kzthukydvA9vL7_bP9V9O9PIAiXl14cQ/formResponse',
-    //   {
-    //     'entry.1599572815': token.email,
-    //     'entry.690252188': token.card.address_zip,
-    //     'entry.1474063298': token.id,
-    //     'entry.1036377864': (window.amount).toString()
-    //   }
-    // )
+    var location = document.getElementById('location').value
+    tinyPOST(
+      'https://docs.google.com/forms/d/e/1FAIpQLScXFW1leCjt2I-lunIb5QZXYdfUHrLMWJKaV2Dbng_nH4VqiQ/formResponse',
+      {
+        'entry.523057126': token.email,
+        'entry.1905224080': token.card.address_zip,
+        'entry.1615134295': token.id,
+        'entry.768194781': (window.amount).toString(),
+        'entry.2124361339': location
+      }
+    )
   }
 });
 

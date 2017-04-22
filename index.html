@@ -63,35 +63,10 @@
         </div>
       </div>
     </section>
-    <section id="request" class="donate">
+    <section id="donate" class="donate"> 
       <div class="container">
         <h2>Ready to Be a Pizza Revolutionary?</h2>
         <p><i>“If you want love, bring pizza to a protest” - Eleanor, Pizza Revolutionary</i></p>
-        <p>Are you exercising your right to free assembly? Let us know and we’ll send the ‘za!</p>
-        <h3>FOR PIZZA DELIVERY REQUESTS</h3>
-        <form action="https://docs.google.com/forms/d/e/1FAIpQLScCIlk-Y-rXLzkHE8rDcrHe0ZB6dQltqrqxlEeR0WeshKm4BA/formResponse" target="_blank" method="POST" >
-          <div class="form-item">
-            <label for="contact-info">Organizer Contact Info</label>
-            <input id="contact-info" type="text" name="entry.729911033" placeholder="e.g. DM @DullesJustice or text Molly at 555-232-3242">
-            <span class="help"><strong>Required:</strong> We need someone to point the delivery person towards when they arrive. Requests without contact information to coordinate (<strong>email</strong>, <strong>twitter handle</strong>, or <strong>phone number</strong>) can't get deliveries!</span>
-          </div>
-          <div class="form-item">
-            <label for="address">Location to Deliver Pizza</label>
-            <textarea id="address" type="text" name="entry.1601928181" placeholder="e.g. Arrivals terminal at Dulles Airport near baggage claim #13"></textarea>
-            <span class="help"><strong>Required:</strong> We need to have a specific <strong>time</strong> and <strong>location</strong> to send pizzas - plus some directions for the deliver person.</span>
-          </div>
-          <div class="form-item">
-            <label for="other-info">Extra Information</label>
-            <textarea type="text" name="entry.1677582883" placeholder="e.g. things will get started at 3 - pizzas would be great by 3:30"></textarea>
-            <span class="help">Optional: Just anything else we should know!</span>
-          </div>
-          <input type="hidden" name="fvv" value="1">
-          <input type="submit" value="Submit request. Feed democracy.">
-        </form>
-      </div>
-    </section>
-    <section id="donate" class="donate"> 
-      <div class="container">
         <h3>TO DONATE</h3>
         <form id="donate-form">
           <fieldset>
@@ -119,7 +94,58 @@
             <label for="custom-amount">Other:</label> $
             <input type="text" name="amount" id="custom-amount">
           </div>
+          <div>
+            <label for="location" >Where do you want to send your pizzas?</label>
+            <input  id="location" type="text" name="location" placeholder="eg Boston's March for Science">
+            <span class="help">If you don't specify a location, we'll send your pizzas where they're most needed</span>
+            <hr>
+          </div>
           <button class="submit is-disabled" id="checkout">Checkout</button>
+        </form>
+      </div>
+    </section>
+    <section id="request" class="donate">
+      <div class="container">
+        <p>Are you exercising your right to free assembly? Let us know and we’ll send the ‘za!</p>
+        <h3>FOR PIZZA DELIVERY REQUESTS</h3>
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSf7EAAEoI_tEfDZP6Itm3dVcZ12R6xqInZspeEod0AdJrXDfA/formResponse" target="_blank" method="POST" >
+          <div class="form-item">
+            <label for="contact-info">Delivery Contact Info</label>
+            <input id="contact-info" type="text" name="entry.1847624745" placeholder="e.g. DM @DullesJustice or text Molly at 555-232-3242">
+            <span class="help">We are sometimes able to donate pizza to protests without this, but a contact guarantees delivery and makes everyone's life easier. Please provide <strong>email</strong>, <strong>twitter handle</strong>, or <strong>phone number</strong>.</span>
+          </div>
+          <div class="form-item">
+            <label for="address">Location to Deliver Pizza</label>
+            <textarea id="address" type="text" name="entry.2134757750" placeholder="e.g. Arrivals terminal at Dulles Airport near baggage claim #13"></textarea>
+            <span class="help"><strong>Required:</strong> We need to have a specific <strong>time</strong> and <strong>location</strong> to send pizzas - plus some directions for the deliver person.</span>
+          </div>
+          <div class="form-item">
+            <label for="pizza-count">How many pizzas do you want?</label>
+            <input id="pizza-count" type="number" placeholder="eg. 10" name="entry.2112789780">
+          </div>
+          <div class="form-item">
+            <fieldset>
+              <legend>Order Plan</legend> <!-- entry.1675308448 -->
+              <ul>
+                <li>
+                  <input type="radio" value="order" id="radio-5" name="entry.1675308448">
+                  <label class="radio" for="radio-5">Please order pizzas for me</label>
+                </li>
+                <li>
+                  <input type="radio" value="reimburse" id="radio-6" name="entry.1675308448">
+                  <label class="radio" for="radio-6">I'm happy to order - reimbursement please!</label>
+                </li>
+              </ul>
+            </fieldset>
+            <span class="help">If you choose reimbursement, we will notify you when your request has been approved and for what amount; we cannot reimburse unapproved orders! We will also need your contact information.</span>
+          </div>
+          <div class="form-item">
+            <label for="other-info">Extra Information</label>
+            <textarea type="text" name="entry.1357065644" placeholder="e.g. delivery by 3:30pm please!"></textarea>
+            <span class="help">Optional: Just anything else we should know!</span>
+          </div>
+          <input type="hidden" name="fvv" value="1">
+          <input type="submit" value="Submit request. Feed democracy.">
         </form>
       </div>
     </section>
@@ -149,8 +175,9 @@
     </section>
     <section class="about">
       <div class="container">
-        <h2>Do You Tweet?</h2>
-        <a class="twitter-timeline" href="https://twitter.com/PizzaToThePolls" data-tweet-limit="8">Yes!</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <h2>Share the Good Word!</h2>
+        <p>We love seeing our pizza go to a good cause! Were you on the receiving end of someone's 'za donation? Share your pics and stories with us at *twitter* and *facebook*</p>
+        <!-- <a class="twitter-timeline" href="https://twitter.com/PizzaToThePolls" data-tweet-limit="8">Yes!</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> -->
         <hr>
       </div>
     </section>
