@@ -14,7 +14,8 @@ tinyGET(url, null, function(data) {
 });
 
 var handler = StripeCheckout.configure({
-  key: 'pk_live_P8CQD0jjeNY83ykHy75Bfxig',
+  // key: 'pk_live_P8CQD0jjeNY83ykHy75Bfxig',
+  key: 'pk_test_YCa5It9RFIu9vLPZSmRcTKYD',
   image: 'https://polls.pizza/images/logo.png',
   locale: 'auto',
   token: function(token) {
