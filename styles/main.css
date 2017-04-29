@@ -1,19 +1,21 @@
 /*colors
-pizza yellow: 234 150 28;
-pizza brown: 160 105 50;
-pizza red: 199 73 40;
+pizza yellow: #EA961C;
+pizza brown: #A06932;
+pizza red: #C74928;
+
+polls red: #DB5653;
 */
 * {
   box-sizing: border-box;
 }
 
 body {
-  border-top: 10px solid #DB5653;
+  border-top: 10px solid #C74928;
   font-family: 'Open Sans', sans-serif;
 }
 
 a {
-  color: #DB5653;
+  color: #C74928;
 }
 
 h1 {
@@ -68,7 +70,7 @@ nav li {
 nav a {
   transition: background-color .1s ease-in;
   display: block;
-  background-color: #DB5653;
+  background-color: #C74928;
   border-radius: 4px;
   color: #fff;
   font-weight: bold;
@@ -80,7 +82,7 @@ nav a {
 }
 
 nav a:hover {
-  background: #DB5653;
+  background: #C74928;
 }
 
 .form-item {
@@ -175,7 +177,7 @@ section {
 }
 
 .donate {
-  background: #DB5653;
+  background: #C74928;
   color: #fff;
 }
 
@@ -247,7 +249,7 @@ input[type="radio"] {
 input[type="radio"]:checked + label,
 input[type="radio"]:focus + label {
   background-color: #fff;
-  color: #DB5653;
+  color: #C74928;
 }
 
 .submit {
