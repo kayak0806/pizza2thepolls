@@ -4,7 +4,7 @@ pizza brown: #A06932;
 pizza red: #C74928;
 
 polls red: #DB5653;
-polls yellow: #EFEEEE;
+polls yellow: #d68522;
 polls blue: #3DC1C8;
 */
 * {
@@ -168,7 +168,7 @@ section {
 }
 
 .report {
-  background: #EA961C;
+  background: #EFEEEE;
   color: #333;
   padding-bottom: 40px;
 }
@@ -280,7 +280,7 @@ input[type="radio"]:focus + label {
   display: block;
   text-align: center;
   padding: 20px;
-  border-bottom: 2px solid #d68522;
+  border-bottom: 2px solid #EA961C;
   margin-right: 2px;
 }
 
@@ -336,7 +336,7 @@ footer a {
     width: 33%;
     text-align: center;
     padding: 20px;
-    border-right: 2px solid #d68522;
+    border-right: 2px solid #EA961C;
     border-bottom: none;
     margin-right: 2px;
   }
